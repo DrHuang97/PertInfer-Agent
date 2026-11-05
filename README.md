@@ -1,8 +1,8 @@
-# PertAgent
+# PertInfer: Agentic Inference of Human Perturbation Chains from Animal Mechanisms
 
-Agent methods for evidence-grounded cross-species perturbation mechanism reconstruction.
+Agentic inference of human perturbation chains from animal mechanisms.
 
-Benchmark and evaluator: [PertAgent Benchmark](https://github.com/DrHuang97/PertAgent-Benchmark).
+Benchmark and evaluator: [PertInfer Benchmark](https://github.com/DrHuang97/PertInfer-Benchmark).
 
 ## Status
 
