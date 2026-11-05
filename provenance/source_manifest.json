@@ -1,0 +1,65 @@
+{
+  "runtime_source": "e2e-tools-v1.14.1",
+  "runtime_manifest_sha256": "f3780625fd38b0e1e505fdec7d6eed53dd4df96b5409603bf11ef7b102a33b1f",
+  "benchmark_commit": "55f1e021ed8b7e93356c4dac72202c4678af020c",
+  "files": [
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "pertagent/path_transfer_v5/e2e_tools.py",
+      "sha256": "d2a39a1664945f5e882045a93afb3dafb55529018d7abd5fe98bb9511f0a5597",
+      "bytes": 43205
+    },
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "pertagent/path_transfer_v5/material_search.py",
+      "sha256": "6a7801d4ca874462b939234a8dc859c2e06a371aa8dade23b3ac4e5a7ce32925",
+      "bytes": 17921
+    },
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "pertagent/path_transfer_v5/research_tools.py",
+      "sha256": "a456b1da4b1afb82b9d0ad1b8a55a83498dc96946671a36400ebc028410f8153",
+      "bytes": 18065
+    },
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "pertagent/path_transfer_v5/identity_research_tools.py",
+      "sha256": "d450f89b26e8c59329c0d5701592b06a515ea3bc1dc99575922ec43e94f73183",
+      "bytes": 4199
+    },
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "pertagent/path_transfer_v5/research_tools_v3.py",
+      "sha256": "96d7d941612c2373efc0f15ed22692f70f369dda45d8036cddbe84d0b89a31cc",
+      "bytes": 13776
+    },
+    {
+      "source_snapshot": "development-project",
+      "source": "tests/test_path_transfer_v5_e2e_tools.py",
+      "sha256": "ab2d00634ba133821b50fc8df23523b6cc7fab549054cb39188952788b13d977",
+      "bytes": 15724
+    },
+    {
+      "source_snapshot": "development-project",
+      "source": "tests/test_path_transfer_v5_material_search.py",
+      "sha256": "184aaff09770dba82669a66883ce928c203b7662af9fe23b2670c6f48c413a08",
+      "bytes": 5887
+    },
+    {
+      "source_snapshot": "runtime-regression-tests",
+      "source": "tests/test_latest_runtime.py",
+      "sha256": "174e6446496682f7c4a670f47754f1106553cd5194a3eedec3aca9f196baf251",
+      "bytes": 4466
+    },
+    {
+      "source_snapshot": "e2e-tools-v1.14.1",
+      "source": "scripts/path_transfer_v5/e2e_tools.py",
+      "sha256": "bfe16b987805930039510dfc512d39a3e46637c80b61903b6f49323333ec24c7"
+    }
+  ],
+  "notes": [
+    "Source code and synthetic tests only; no historical run outputs.",
+    "Portable runner is a new integration layer, not the historical dynamic experiment dispatcher.",
+    "Frozen v1.14.1 is not claimed to have produced historical model results."
+  ]
+}

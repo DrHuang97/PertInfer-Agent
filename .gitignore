@@ -21,3 +21,12 @@ artifacts/
 runs/
 logs/
 .DS_Store
+
+# All local runs, corpora and validation environments stay out of Git.
+/validation/
+/demo-output/
+/corpora/
+/data/
+/experiments/
+/predictions/
+/model-config.local.json
