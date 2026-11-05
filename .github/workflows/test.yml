@@ -1,0 +1,27 @@
+name: Agent toolkit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python -m pip install '.[test]' build
+      - run: python -m pytest -q
+      - run: python -m build
+      - name: Install wheel and score synthetic prediction outside checkout
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/agent-venv"
+          "$RUNNER_TEMP/agent-venv/bin/python" -m pip install dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/agent-venv/bin/pertinfer-agent" demo --output wheel-demo
+          "$RUNNER_TEMP/agent-venv/bin/pertinfer-benchmark" score --release wheel-demo/release --predictions wheel-demo/agent-run/predictions --output wheel-scores.json

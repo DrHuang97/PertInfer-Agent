@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pertinfer-agent"
+version = "0.1.0"
+description = "Agentic inference of human perturbation chains from animal mechanisms"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = [
+  "pertinfer-benchmark @ git+https://github.com/DrHuang97/PertInfer-Benchmark.git@55f1e021ed8b7e93356c4dac72202c4678af020c",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+pertinfer-agent = "pertinfer_agent.cli:main"
+pertinfer-tools = "pertinfer_agent.tool_cli:main"
+
+[project.urls]
+Repository = "https://github.com/DrHuang97/PertInfer-Agent"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pertinfer_agent = ["*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
